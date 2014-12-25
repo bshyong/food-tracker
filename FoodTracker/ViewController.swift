@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   var suggestedSearchFoods:[String] = []
   var filteredSuggestedSearchFoods:[String] = []
+  var scopeButtonTitles = ["Recommended", "Search Results", "Saved"]
   
   
   override func viewDidLoad() {
@@ -28,6 +29,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // update the tableview header with the search bar
     self.tableView.tableHeaderView = self.searchController.searchBar
+    
+    self.searchController.searchBar.scopeButtonTitles = scopeButtonTitles
+    
     // gives access to callbacks from searchBar
     self.searchController.searchBar.delegate = self
     // ensure the search results controller is presented inside the view controller
@@ -67,6 +71,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
   // MARK: UISearchResultsUpdating
   func updateSearchResultsForSearchController(searchController: UISearchController) {
+    let searchString = self.searchController.searchBar.text
+    let selectedScopeButtonIndex = self.searchController.searchBar.selectedScopeButtonIndex
+    self.filterContentForSearch(searchString, scope: selectedScopeButtonIndex)
+    self.tableView.reloadData()
+  }
+
+  func filterContentForSearch (searchText: String, scope: Int) {
+    self.filteredSuggestedSearchFoods = self.suggestedSearchFoods.filter({ (food : String) -> Bool in
+      var foodMatch = food.rangeOfString(searchText)
+      return foodMatch != nil
+    })
   }
 
 }
