@@ -22,5 +22,6 @@ class USDAItem: NSManagedObject {
     @NSManaged var sugar: String
     @NSManaged var protein: String
     @NSManaged var fatTotal: String
+    @NSManaged var name: String
 
 }

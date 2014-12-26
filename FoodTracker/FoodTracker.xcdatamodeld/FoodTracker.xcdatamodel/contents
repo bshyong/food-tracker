@@ -8,11 +8,12 @@
         <attribute name="energy" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fatTotal" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="protein" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sugar" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vitaminC" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="USDAItem" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="USDAItem" positionX="-63" positionY="-18" width="128" height="210"/>
     </elements>
 </model>
