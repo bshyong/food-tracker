@@ -135,14 +135,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     makeRequest(searchBar.text)
   }
 
+  func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+    self.tableView.reloadData()
+  }
+  
   func makeRequest (searchString : String) {
-//    let url = NSURL(string: "https://api.nutritionix.com/v1_1/search/\(searchString)?results=0%3A20&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id&appId=\(kAppId)&appKey=\(kAppKey)")
-//    let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
-//      var stringData = NSString(data: data, encoding: NSUTF8StringEncoding)
-//      println(stringData)
-//      println(response)
-//    })
-//    task.resume()
     
     var request = NSMutableURLRequest(URL: NSURL(string: "https://api.nutritionix.com/v1_1/search/")!)
     let session = NSURLSession.sharedSession()
@@ -160,11 +157,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     request.addValue("application/json", forHTTPHeaderField: "Accept")
 
     var task = session.dataTaskWithRequest(request, completionHandler: { (data, response, err) -> Void in
-//      var stringData = NSString(data: data, encoding: NSUTF8StringEncoding)
-//      println(stringData)
+
       var conversionError: NSError?
       var jsonDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableLeaves, error: &conversionError) as? NSDictionary
-//      println(jsonDictionary)
       
       if conversionError != nil {
         println(conversionError!.localizedDescription)
