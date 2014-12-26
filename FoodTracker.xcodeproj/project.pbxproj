@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01AF55CF1A4D10DA00E47446 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AF55CE1A4D10DA00E47446 /* DataController.swift */; };
 		2860B5501A4942B2001565FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860B54F1A4942B2001565FA /* AppDelegate.swift */; };
 		2860B5531A4942B2001565FA /* FoodTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2860B5511A4942B2001565FA /* FoodTracker.xcdatamodeld */; };
 		2860B5551A4942B2001565FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860B5541A4942B2001565FA /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01AF55CE1A4D10DA00E47446 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		2860B54A1A4942B2001565FA /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2860B54E1A4942B2001565FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2860B54F1A4942B2001565FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				2860B5741A4943B6001565FA /* DetailViewController.swift */,
 				2860B54F1A4942B2001565FA /* AppDelegate.swift */,
 				2860B5541A4942B2001565FA /* ViewController.swift */,
+				01AF55CE1A4D10DA00E47446 /* DataController.swift */,
 				2860B5561A4942B2001565FA /* Main.storyboard */,
 				2860B5591A4942B2001565FA /* Images.xcassets */,
 				2860B55B1A4942B2001565FA /* LaunchScreen.xib */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01AF55CF1A4D10DA00E47446 /* DataController.swift in Sources */,
 				2860B5551A4942B2001565FA /* ViewController.swift in Sources */,
 				2860B5531A4942B2001565FA /* FoodTracker.xcdatamodeld in Sources */,
 				2860B5501A4942B2001565FA /* AppDelegate.swift in Sources */,
@@ -413,6 +417,7 @@
 				2860B56E1A4942B2001565FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2860B56F1A4942B2001565FA /* Build configuration list for PBXNativeTarget "FoodTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				2860B5711A4942B2001565FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
