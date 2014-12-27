@@ -82,14 +82,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xcB-19-bS3">
-                        <barButtonItem key="rightBarButtonItem" title="Eat It" id="BUL-oy-hBZ">
+                        <barButtonItem key="rightBarButtonItem" title="Eat It" id="rSO-0v-jVL">
                             <connections>
-                                <action selector="eatItBarButtonItemPressed:" destination="ufS-xp-kV1" id="PVy-bi-fZi"/>
+                                <action selector="eatItBarButtonItemPressed:" destination="ufS-xp-kV1" id="x13-ou-uds"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="eatItBarButtonItemPressed" destination="BUL-oy-hBZ" id="XTy-Gt-65G"/>
                         <outlet property="textView" destination="3gT-Xl-Unv" id="xgt-xQ-GJ8"/>
                     </connections>
                 </viewController>
